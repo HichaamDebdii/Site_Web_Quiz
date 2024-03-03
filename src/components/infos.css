@@ -1,0 +1,166 @@
+/* body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.button{
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  background: #000000;
+
+}
+.button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #fcecec,
+    #ff7301,
+    #770707,
+    #288a97,
+    #e7ad0d,
+    #d2b900,
+    #040310,
+    #ff0202,
+    #4a3030
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.link_ch{
+  text-decoration: none;
+  color: white;
+  
+}
+.choix{
+  background-color: beige; */
+  /* padding: 10px;
+  border-radius: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+.p{
+  margin: 20px;
+  text-align: center;
+ 
+}
+@media screen and (max-width: 767px) {
+  .choix {
+    width: 100% !important; 
+    margin: 0 !important; 
+  }
+} */
+
+
+/* infos.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.choix {
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  background: #000000;
+  border-radius: 50px;
+}
+
+.button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #fcecec,
+    #ff7301,
+    #770707,
+    #288a97,
+    #e7ad0d,
+    #d2b900,
+    #040310,
+    #ff0202,
+    #4a3030
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.link_ch {
+  text-decoration: none;
+  color: white;
+}
+
+.p {
+  margin: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .choix {
+    width: 40%; 
+  }
+}

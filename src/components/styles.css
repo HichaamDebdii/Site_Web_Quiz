@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.videoquiz {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quiz-container {
+  /* display: flex;
+  flex-direction: column;
+  height: 100vh; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alignement horizontal au centre */
+    justify-content: center; /* Alignement vertical au centre */
+    height: 100vh; /* 100% de la hauteur de la vue */
+  
+}
+
+.app {
+  /* position: relative;
+  flex: 1;
+  z-index: 1;
+  overflow: hidden;  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app h1{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz {
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+/* .quiz h2 {
+    font-size: 18px;
+    color:#001e4d;
+    font-weight: 600; 
+} */
+.quiz h2 {
+  font-size: 18px;
+  color: #001e4d;
+  font-weight: 600;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Set a max-width if needed */
+  margin: 0 auto; /* Center horizontally */
+  width: 80%; /* Adjust the width as needed */
+    max-width: 600px;
+}
+
+.btn {
+    background-color: #efe3e3;
+    color: #000000;
+    font-weight: 500;
+    width: 400px;
+   
+    font-size: small;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    padding:10px;
+    margin:10px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px;
+    border-radius: 50px;
+}
+.tt{
+    font-size: large;
+    margin-bottom: 60px;
+   
+}
+
+/* CSS */
+.ressayer {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.ressayer:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.ressayer:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+.btn:hover:not([disabled]){
+    background: #ffffff;
+    color: #040404;
+}
+#question{
+    color: black;
+    margin-bottom: 30px;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-button {
+    background: #001e4d;
+    color:#fff;
+    font-weight: 500;
+    width: 200px;
+    border: 0;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.correct {
+    background: #8cffbe;
+}
+
+.incorrect {
+    background: #ee8c8c;
+   
+}
+.icon-correct{
+    font-size: large;
+    float: right;
+    color: #04e063;
+}
+.icon-incorrect{
+    font-size: large;
+    float: right;
+    color: red;
+}
+
+select{
+    width: 300px;
+    margin: 10px;
+    color: #001e4d;
+    font-weight: bold;
+    border-radius: 50px;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
+}
+option{
+    color: #001e4d;
+    font-weight: bold;
+}
+/* .qst{
+    margin-left:100px;
+ margin-top: 30px;
+ font-size: small;
+ position: fixed;
+ left: 50%;
+    color: rgb(10, 10, 10);
+   
+}
+.temps{
+    margin-top: 10px;
+    font-size: small;
+    position: fixed;
+    left: 50%;
+   
+    margin-left:100px;
+    color: rgb(0, 0, 0);
+   
+} */
+.qst,
+.temps {
+    font-size: small;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(10, 10, 10);
+}
+
+.qst {
+    margin-top: 30px;
+}
+
+.temps {
+    /* margin-top: 10px; */
+    margin-bottom: 60px;
+    margin-top: auto;
+}
+
+.opt{
+    display: flex;
+}
+#next-button {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#next-button:hover,focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#next-button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+#answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; /* Adjust the gap between buttons as needed */
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #answer-buttons {
+    grid-template-columns: 1fr; /* Change to a single column layout for smaller screens */
+  }
+  .quiz h2 {
+    font-size: 16px; /* Adjust the font size for the question */
+    margin-bottom: 10px;
+  }
+
+  .temps {
+    font-size: 14px; /* Adjust the font size for the timer */
+    margin-top: 5px;
+  }
+  .quiz-container {
+    align-items: center; /* Change alignment for smaller screens */
+  }
+
+  .quiz {
+    width: 100%; /* Adjust the width to take full width on smaller screens */
+    max-width: none; /* Remove max-width on smaller screens */
+  }
+}
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+
